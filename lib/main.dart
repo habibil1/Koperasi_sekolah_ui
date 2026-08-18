@@ -9,8 +9,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Koperasi Skolah')),
-        body: const Center(child: Text('koperasi kasir')),
+        appBar: AppBar(title: const Text('Koperasi Sekolah')),
+        body: Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Buku tulis'),
+              SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text('Anggota: Rp 5.000'),
+                  Text('Umum: Rp 5.500'),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
