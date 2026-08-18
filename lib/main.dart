@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Koperasi Sekolah')),
+        appBar: AppBar(title: const Text('Koperasi Skolah')),
         body: const Center(child: Text('koperasi kasir')),
       ),
     );
