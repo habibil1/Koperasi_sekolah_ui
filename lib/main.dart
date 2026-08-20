@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+
+  int stok = 202;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Koperasi Sekolah')),
-        body: Container(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('Buku tulis'),
-              SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text('Anggota: Rp 5.000'),
-                  Text('Umum: Rp 5.500'),
-                ],
-              ),
-            ],
+        body: Card(
+          margin: const EdgeInsets.all(12),
+          child: ListTile(
+            leading: const Icon(Icons.inventory_2),
+            title: const Text(
+              'Buku tulis',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            subtitle: const Text('Anggota Rp5.000 | Umum Rp5.500'),
+            trailing: Text(
+              'Stok ' + stok.toString(),
+              style: TextStyle(color: stok == 0 ? Colors.red : Colors.black),
+            ),
           ),
         ),
       ),
